@@ -10,6 +10,22 @@
     <label for="txtnac">Escreva aqui a sua nacinalidade: </label>
     <input type="text" name="txtnac" id="txtnac">
 
-    <input type="button" value="Enviar" onclick="">
+    <input type="button" value="Enviar" onclick="validar()">
+
+    <div id="res">
+        <p>Resultado: </p>
+    </div>
+
+    <script>
+         function validar() {
+            var txtn = window.document.getElementById('txtnac')
+            var res = window.document.getElementById('res')
+            if (txtn.value == 'Brasil') {
+                res.innerHTML = `<p>Você é <strong>Brasileiro</strong>!</p>`
+            } else {
+                res.innerHTML = '<p>Você é <strong>estrangeiro</strong>!</p>'
+            }
+         }
+    </script>
 </body>
 </html>
